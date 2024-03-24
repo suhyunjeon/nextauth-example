@@ -17,9 +17,6 @@ async function checkUserPermission(key) {
         },
     });
 
-    console.log('response....');
-    console.log(response);
-
     if (!response.ok) {
         throw new Error('API 호출 실패');
     }
@@ -43,8 +40,7 @@ export async function getServerSideProps(context) {
         };
     }
 
-    const key = 'ping';
-    const hasAdditionalPermission = await checkUserPermission(key);
+    const hasAdditionalPermission = await checkUserPermission();
 
     if (!hasAdditionalPermission) {
         // 권한이 없는 경우 unauthorized 페이지로 리다이렉트

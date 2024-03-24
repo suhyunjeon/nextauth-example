@@ -13,7 +13,7 @@ export default NextAuth({
                 // 사용자 인증이 성공한 경우
                 console.log('credentials....');
                 console.log(credentials);
-                return { id: 1, name: "John Smith", email: "jsmith@example.com" };
+                return { id: 1, name: "suhyjeon", email: "suhyjeon@example.com" };
                 // } else {
                 //     // 인증 실패
                 //     return null;
